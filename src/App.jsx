@@ -1,18 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ProducerConsumer from './pages/ProducerConsumer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import SantaClaus from './pages/SantaClaus';
 
-const App = () => {
+function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/producer-consumer" element={<ProducerConsumer />} />
-        {/* Add more routes for other IPC problems later */}
+        <Route path="/" element={<Home />} />
+        <Route path="/santa-claus" element={<SantaClaus />} />
+        {/* Add other routes later */}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
